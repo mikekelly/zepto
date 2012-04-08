@@ -1176,10 +1176,10 @@
         table.html('<tbody><tr><td>ok</td></tr></tbody>')
         t.assertEqual(html, table.html())
 
-        var table2 = $('#htmltest5 tr')
+        var tableRow = $('#htmltest5 tr')
         html = '<td>foo</td>'
-        table2.html(html)
-        t.assertEqual(html, table2.html())
+        tableRow.html(html)
+        t.assertEqual(html, tableRow.html())
       },
 
       testText: function(t){
