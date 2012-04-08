@@ -62,6 +62,10 @@
   <div class="htmltest" id="htmltest2"></div>
   <div id="htmltest3"></div>
   <table id="htmltest4"></table>
+  <table id="htmltest5">
+    <tr>
+    </tr>
+  </table>
 
   <div id="texttest1" class="texttest"><span>Here <strong>is</strong> some text</span></div>
   <div id="texttest2" class="texttest">And <em>some more</em></div>
@@ -1171,6 +1175,11 @@
           html = '<tbody><tr><td>ok</td></tr></tbody>'
         table.html('<tbody><tr><td>ok</td></tr></tbody>')
         t.assertEqual(html, table.html())
+
+        var table2 = $('#htmltest5 tr')
+        html = '<td>foo</td>'
+        table2.html(html)
+        t.assertEqual(html, table2.html())
       },
 
       testText: function(t){
